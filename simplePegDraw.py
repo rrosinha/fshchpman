@@ -16,8 +16,9 @@ def number_of_fishers():
         print("Please enter an integer for the number of competing fishermen")
     
 
-def draw_and_print(fnumber):
+def draw_and_print():
     """ Draw and print the pegs for a given number of fishermen. """
+    fnumber = number_of_fishers()
     pegs = [i for i in range(1, fnumber+1)]
     print(pegs)
     random.shuffle(pegs)
@@ -26,4 +27,4 @@ def draw_and_print(fnumber):
 
 
 if __name__ == "__main__":
-    number_of_fishers()
+    draw_and_print()
