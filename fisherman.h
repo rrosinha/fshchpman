@@ -1,23 +1,34 @@
-// declare a fisherman class
+// Fisherman class declaration
 // This a competition fisherman that will participate in a fishing match
-#include <iostream>
 #include <string>
+#include <string_view>
 
-#ifndef MYHEADER_H
-#define MYHEADER_H
+#pragma once
+
 
 class Fisherman
 {
     public:
-
+        //Constructor
+        Fisherman(int fId, std::string fName);
+        
+        //Setters
+        void setFishingPeg(int fPeg);
+        void setFishedWeight(int fWeight);
+        void setScore(double fScore);
+        
+        //Getters
+        int getFId() const;
+        const std::string& getFName() const;
+        int getFPeg() const;
+        int getFWeight() const;
+        double getFScore() const;
 
     private:
-        std::string licenseId;
+        int id{0};
         std::string name;
-        int fishingPeg;
-        double fishedWeight;
-        double score;
+        int fishingPeg{0};
+        int fishedWeightGrams{0.0};
+        double score{0.0};
         
 };
-
-#endif
